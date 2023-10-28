@@ -200,3 +200,19 @@ function endGame() {
     cell.classList.add("disabled");
   }
 }
+
+// Requirement 11: Register a submit event listener and create an event handler
+nameForm.addEventListener("submit", (event) =>{
+  event.preventDefault();
+  const playerNameInput = document.getElementById("player-name");
+  const playerName = playerNameInput.value.trim();
+  if (playerName === "") {
+    alert("Please enter your name to start the game.");
+  } else {
+    playerNameInput.setAttribute("disabled", "true");
+    playerNameInput.classList.add("disabled");
+    document.getElementById("name-form").style.display = "none";
+    document.getElementById("board").style.display = "grid"; // Display the game board
+    document.getElementById("message").textContent = `${playerName}'s turn`;
+  }
+});
