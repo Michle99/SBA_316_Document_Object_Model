@@ -85,7 +85,7 @@ function handleCellClick(event) {
       // Requirement 8: Modify the text content of an element
       messageElement.textContent = `Player ${currentPlayer}'s turn`;
 
-      // setTimeout(computerTurn, 500); // Requirement 12: BOM method
+      setTimeout(computerTurn, 500); // Requirement 12: BOM method
     }
   }
 }
