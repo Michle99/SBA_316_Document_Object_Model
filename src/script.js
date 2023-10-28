@@ -17,3 +17,12 @@ for (let i = 0; i < 9; i++) {
   // Requirement 6: Append created div cell to the document fragment
   fragment.appendChild(cell);
 }
+
+// Requirement 6: Append the DocumentFragment to the board element
+boardElement.appendChild(fragment);
+
+// Game variables
+let currentPlayer = "X";
+let computerPlayer = "O";
+let gameBoard = ["", "", "", "", "", "", "", "", ""];
+let gameOver = false;
