@@ -66,8 +66,8 @@ function handleCellClick(event) {
           endGame();
         }
         // Requirement 12: Use window.alert
-        // window.alert(`Player ${currentPlayer} wins!`);
-        // endGame();
+        window.alert(`Player ${currentPlayer} wins!`);
+        endGame();
       }, 2000);
     // } else if (gameBoard.every((cell) => cell !== "")) {
     //   // Requirement 12: Use window.alert
