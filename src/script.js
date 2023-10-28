@@ -89,3 +89,21 @@ function handleCellClick(event) {
     }
   }
 }
+
+// restart game function
+function restartGame() {
+  if (confirm("Are you sure you want to restart the game?")) {
+    for (const cell of boardElement.children) {
+      cell.textContent = "";
+      cell.classList.remove("disabled");
+      cell.classList.remove("clicked");
+      cell.classList.remove("winning-cell");
+    }
+    currentPlayer = "X";
+    computerPlayer = "O";
+    gameBoard = ["", "", "", "", "", "", "", "", ""];
+    gameOver = false;
+
+    messageElement.textContent = "Player's turn";
+  }
+}
