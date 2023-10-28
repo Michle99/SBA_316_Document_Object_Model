@@ -11,7 +11,7 @@ const formParent = nameForm.parentNode;
 // Requirement 4: Iterate over a collection of elements to accomplish a task
 for (let i = 0; i < 9; i++) {
   // Requirement 5: Create an element using createElement
-  // const cell = document.createElement("div");
+  const cell = document.createElement("div");
   // cell.classList.add("cell");
   // cell.dataset.index = i;
   // Requirement 6: Append created div cell to the document fragment
