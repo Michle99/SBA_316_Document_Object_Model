@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #918acb;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    color: #333;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    gap: 10px;
+}
+
+.cell {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    background: #f1f1f1;
+    color: #333;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.1s;
+}
+
+.cell:hover {
+    background: #ddd;
+}
+
+.cell.disabled {
+    cursor: not-allowed;
+}
+  /* Task 8: Modify the style of an element in response to user interactions */
+.cell.clicked {
+    background: #c27575;
+    color: #fff;
+}
+#message {
+    color: #333;
+    font-size: 24px;
+}
+
+#reset-button {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+#reset-button:hover {
+    background: #555;
+}
+
+.winning-cell {
+  background: #6ef442; /* Change to the desired highlighting color */
+  color: #201a1a;
+}
+
+ /* Additional style for the player's name form */
+ #name-form {
+    display: block;
+    margin-top: 20px;
+}
+
+#player-name {
+    padding: 5px;
+}
+
+.board-hidden {
+    display: none;
+}
