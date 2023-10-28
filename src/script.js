@@ -192,3 +192,11 @@ function checkForWin(player) {
 
   return false;
 }
+
+// endGame() to end game
+function endGame() {
+  gameOver = true;
+  for (const cell of boardElement.children) {
+    cell.classList.add("disabled");
+  }
+}
