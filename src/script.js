@@ -26,3 +26,8 @@ let currentPlayer = "X";
 let computerPlayer = "O";
 let gameBoard = ["", "", "", "", "", "", "", "", ""];
 let gameOver = false;
+
+// Requirement 11: Register a click event listener and create an event handler
+for (const cell of boardElement.children) {
+  cell.addEventListener("click", handleCellClick);
+}
