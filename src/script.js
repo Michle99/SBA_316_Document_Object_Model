@@ -69,17 +69,17 @@ function handleCellClick(event) {
         window.alert(`Player ${currentPlayer} wins!`);
         endGame();
       }, 2000);
-    // } else if (gameBoard.every((cell) => cell !== "")) {
-    //   // Requirement 12: Use window.alert
-    //   // window.alert("It's a draw!");
-    //   setTimeout(() => {
-    //     if (confirm("It's a draw! Play again?")) {
-    //       restartGame();
-    //     } else {
-    //       endGame();
-    //     }
-    //   }, 500);
-    //   // endGame();
+    } else if (gameBoard.every((cell) => cell !== "")) {
+      // Requirement 12: Use window.alert
+      // window.alert("It's a draw!");
+      setTimeout(() => {
+        if (confirm("It's a draw! Play again?")) {
+          restartGame();
+        } else {
+          endGame();
+        }
+      }, 500);
+      endGame();
     // } else {
     //   currentPlayer = currentPlayer === "X" ? "O" : "X";
     //   // Requirement 8: Modify the text content of an element
