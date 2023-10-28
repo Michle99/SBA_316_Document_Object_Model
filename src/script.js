@@ -43,31 +43,32 @@ function handleCellClick(event) {
     cell.innerHTML = currentPlayer;
     // Requirement 9: Modify the style of an element using classList
     cell.classList.add("disabled");
-    cell.classList.add("clicked");  // Requirement 10:
+    // Requirement 10: Modify at least one attribute of an element in response to user interaction.
+    cell.classList.add("clicked");  
     gameBoard[index] = currentPlayer;
 
-    // if (checkForWin(currentPlayer)) {
+    if (checkForWin(currentPlayer)) {
       // Hightlight the wining cell combination
-      // const winCellTiles = getWinningTiles(currentPlayer);
+      const winCellTiles = getWinningTiles(currentPlayer);
       // // Remove winning-cell class from all cells
-      // for (const boardCell of boardElement.children) {
-      //   boardCell.classList.remove("clicked");
-      // }
-      // for (const winIndex of winCellTiles) {
-      //   boardElement.children[winIndex].classList.add("winning-cell");
-      // }
+      for (const boardCell of boardElement.children) {
+        boardCell.classList.remove("clicked");
+      }
+      for (const winIndex of winCellTiles) {
+        boardElement.children[winIndex].classList.add("winning-cell");
+      }
 
-      // // Delay to display the winning cells before showing the alert
-      // setTimeout(() => {
-      //   if (confirm(`Player ${currentPlayer} wins! Play again?`)) {
-      //     // restartGame();
-      //   } else {
-      //     endGame();
-      //   }
-      //   // Requirement 12: Use window.alert
-      //   // window.alert(`Player ${currentPlayer} wins!`);
-      //   // endGame();
-      // }, 2000);
+      // Delay to display the winning cells before showing the alert
+      setTimeout(() => {
+        if (confirm(`Player ${currentPlayer} wins! Play again?`)) {
+          // restartGame();
+        } else {
+          endGame();
+        }
+        // Requirement 12: Use window.alert
+        // window.alert(`Player ${currentPlayer} wins!`);
+        // endGame();
+      }, 2000);
     // } else if (gameBoard.every((cell) => cell !== "")) {
     //   // Requirement 12: Use window.alert
     //   // window.alert("It's a draw!");
