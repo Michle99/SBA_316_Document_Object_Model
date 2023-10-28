@@ -15,5 +15,5 @@ for (let i = 0; i < 9; i++) {
   // cell.classList.add("cell");
   // cell.dataset.index = i;
   // Requirement 6: Append created div cell to the document fragment
-  // fragment.appendChild(cell);
+  fragment.appendChild(cell);
 }
