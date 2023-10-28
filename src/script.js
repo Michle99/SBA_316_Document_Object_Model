@@ -134,3 +134,34 @@ function getWinningTiles(player) {
 
   return [];
 }
+
+// computerTurn() to play game
+function computerTurn() {
+  if (gameOver) return;
+
+  let emptyCells = gameBoard.reduce((acc, val, index) => {
+    if (val === "") acc.push(index);
+    return acc;
+  }, []);
+
+  const randomIndex = Math.floor(Math.random() * emptyCells.length);
+  const computerMove = emptyCells[randomIndex];
+
+  const cell = boardElement.children[computerMove];
+  cell.textContent = computerPlayer;
+  cell.classList.add("disabled");
+  gameBoard[computerMove] = computerPlayer;
+
+  if (checkForWin(computerPlayer)) {
+    // Requirement 12: Use window.alert
+    window.alert("Computer wins!");
+    endGame();
+  } else if (gameBoard.every((cell) => cell !== "")) {
+    // Requirement 12: Use window.alert
+    window.alert("It's a draw!");
+    endGame();
+  } else {
+    messageElement.textContent = `Player ${currentPlayer}'s turn`;
+    currentPlayer = currentPlayer === "X" ? "O" : "X";
+  }
+}
