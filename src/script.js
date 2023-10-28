@@ -42,9 +42,9 @@ function handleCellClick(event) {
     // Requirement 8: Modify the HTML content of an element
     cell.innerHTML = currentPlayer;
     // Requirement 9: Modify the style of an element using classList
-    // cell.classList.add("disabled");
-    // cell.classList.add("clicked");  // Requirement 10:
-    // gameBoard[index] = currentPlayer;
+    cell.classList.add("disabled");
+    cell.classList.add("clicked");  // Requirement 10:
+    gameBoard[index] = currentPlayer;
 
     // if (checkForWin(currentPlayer)) {
       // Hightlight the wining cell combination
